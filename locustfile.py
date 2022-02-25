@@ -19,7 +19,7 @@ headers = {
 
 id_lock = threading.Lock()
 user_id = 1
-FUND_AMOUNT = 10_000_000_000_000
+FUND_AMOUNT = 100_000_000_000_000_000_000 # 100 CTC
 
 
 class CreditcoinUser(HttpUser):
@@ -30,9 +30,8 @@ class CreditcoinUser(HttpUser):
             module='Creditcoin',
             function='register_address',
             params={
-                'blockchain': 'ethereum',
+                'blockchain': 'Ethereum',
                 'address': random_address(),
-                'network': 'mainnet'
             }
         )
 
